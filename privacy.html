@@ -27,39 +27,53 @@
   <p>
     Glad does not have user accounts and does not ask you to sign in. Your missions, goals, chosen
     name, personality setting, and streak are stored <strong>only on your device</strong>. We do not
-    operate a server that collects or stores your personal data. The limited exceptions — sending text
-    to an AI service to generate messages, processing subscriptions, and using an advertising and
-    analytics service to measure our marketing — are described below. On iOS, advertising measurement
-    only happens if you allow it through Apple’s tracking prompt (see Section 6).
+    operate a server that collects or stores a personal profile of you. There are a few limited
+    exceptions, each described below: sending text to an AI service to generate messages, sending
+    diagnostic crash reports so we can fix bugs, processing subscriptions through Apple, and using an
+    advertising and analytics service (Meta) to measure our marketing. On iOS, advertising measurement
+    only happens if you allow it through Apple’s tracking prompt (see Section 7).
   </p>
 
   <h2>2. Information stored on your device</h2>
-  <p>The following is saved locally on your phone (using the device’s on-device storage) and is not transmitted to us:</p>
+  <p>The following is saved locally on your phone (using the device’s on-device storage) and is not transmitted to us for storage:</p>
   <ul>
     <li>The name you choose to be called</li>
-    <li>Your missions and goals (titles, days, and times)</li>
+    <li>Your missions and goals (their titles, days, and times, and which goal a mission belongs to)</li>
     <li>Your selected AI personality</li>
-    <li>Your completion streak and progress</li>
+    <li>Your completion streak, points, and progress</li>
   </ul>
   <p>If you delete the app, this information is erased from your device.</p>
 
   <h2>3. AI-generated messages</h2>
   <p>
-    To create personalized reminders and encouragement in your chosen personality, Glad sends limited
-    text to an AI processing service. Specifically, when a message is generated, the following may be
-    transmitted: your chosen name, the title and time of the relevant mission or goal, and the selected
-    personality style.
+    To create personalized reminders, greetings, and encouragement in your chosen personality, Glad
+    sends limited text to an AI processing service. Depending on the message being generated, this may
+    include:
   </p>
+  <ul>
+    <li>Your chosen name;</li>
+    <li>The titles, days, and times of your missions and goals, and which goal a mission belongs to (a single message may include your full current list so the wording can reflect what you are working on);</li>
+    <li>Your selected personality style.</li>
+  </ul>
   <p>
     This text is sent over a secure connection to our processing endpoint, which forwards it to
     <strong>Google’s Gemini AI service</strong> to generate the response. We do not use this content to
-    build a profile of you, and we do not sell it. Google’s handling of data sent to its AI services is
-    governed by Google’s own privacy terms. We recommend you avoid putting sensitive personal
-    information in mission or goal titles.
+    build a marketing profile of you, and we do not sell it. Google’s handling of data sent to its AI
+    services is governed by Google’s own privacy terms. Because these titles are sent for processing,
+    <strong>we recommend you avoid putting sensitive personal information in mission or goal titles.</strong>
   </p>
   <p>If the AI service is unavailable, Glad falls back to built-in messages and sends nothing.</p>
 
-  <h2>4. Subscriptions and purchases</h2>
+  <h2>4. Diagnostics and crash reports</h2>
+  <p>
+    So we can find and fix problems, Glad sends a basic diagnostic report to our processing endpoint if
+    the app encounters an error. A report contains a short error message, a technical stack trace, and
+    your device platform and operating-system version. These reports are used only to diagnose and fix
+    bugs. They are not used to identify you or to build a profile, and they are not sold. Error messages
+    and stack traces are not intended to contain personal information.
+  </p>
+
+  <h2>5. Subscriptions and purchases</h2>
   <p>
     Glad is offered as an auto-renewing subscription that begins with a free trial. Purchases are processed by <strong>Apple</strong> and managed
     on our behalf by <strong>RevenueCat</strong>, our subscription infrastructure provider. To validate
@@ -72,13 +86,13 @@
     <li>Apple’s privacy practices: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></li>
   </ul>
 
-  <h2>5. Notifications</h2>
+  <h2>6. Notifications</h2>
   <p>
     Glad sends local notifications (reminders) that are scheduled and delivered on your device. These do
     not transmit data to us. You can turn notifications off at any time in your device Settings.
   </p>
 
-  <h2>6. Advertising and analytics (Meta)</h2>
+  <h2>7. Advertising and analytics (Meta)</h2>
   <p>
     To measure how well our advertising works and to understand how the app is installed and used, Glad
     uses the <strong>Meta (Facebook) SDK</strong> from Meta Platforms, Inc. When enabled, the Meta SDK
@@ -93,8 +107,9 @@
     Meta uses this information to attribute app installs and events to our ads, to measure and improve
     ad performance, and — subject to your choices and Meta’s own policies — for Meta’s advertising and
     analytics. This means a limited amount of your app activity may be shared with a third party (Meta)
-    for advertising measurement. Meta’s handling of this data is governed by Meta’s Privacy Policy:
-    <a href="https://www.facebook.com/privacy/policy/">https://www.facebook.com/privacy/policy/</a>.
+    and, on iOS, used to <strong>track you across other companies’ apps and websites</strong> for
+    advertising measurement, when you permit it. Meta’s handling of this data is governed by Meta’s
+    Privacy Policy: <a href="https://www.facebook.com/privacy/policy/">https://www.facebook.com/privacy/policy/</a>.
   </p>
   <p><strong>Your choices:</strong></p>
   <ul>
@@ -110,40 +125,41 @@
     </li>
   </ul>
 
-  <h2>7. Information we do NOT collect</h2>
+  <h2>8. Information we do NOT collect</h2>
   <ul>
     <li>We do not require an account and do not collect your name, email, or contacts for our own use.</li>
     <li>We do not sell your personal information.</li>
     <li>
-      Aside from the advertising and analytics described in Section 6 — which on iOS requires your
+      Aside from the advertising and analytics described in Section 7 — which on iOS requires your
       consent — we do not track you across other companies’ apps and websites.
     </li>
     <li>We do not knowingly collect data from children under 13.</li>
   </ul>
 
-  <h2>8. Data retention and deletion</h2>
+  <h2>9. Data retention and deletion</h2>
   <p>
-    Because your data lives on your device, you control it. To delete everything, delete the app. Text
-    sent for AI generation is processed transiently to return a message and is not retained by us.
-    Advertising and analytics events shared with Meta are retained and handled according to Meta’s
-    policies; you can adjust or reset your advertising identifier in your device settings.
+    Because your app data lives on your device, you control it. To delete everything Glad stores, delete
+    the app. Text sent for AI generation is processed transiently to return a message and is not
+    retained by us. Diagnostic crash reports are retained only as long as needed to investigate and fix
+    issues. Advertising and analytics events shared with Meta are retained and handled according to
+    Meta’s policies; you can adjust or reset your advertising identifier in your device settings.
   </p>
 
-  <h2>9. Children’s privacy</h2>
+  <h2>10. Children’s privacy</h2>
   <p>
     Glad is not directed to children under 13, and we do not knowingly collect personal information from
     them. If you believe a child has provided information, contact us and we will address it.
   </p>
 
-  <h2>10. Changes to this policy</h2>
+  <h2>11. Changes to this policy</h2>
   <p>
     We may update this Privacy Policy from time to time. The “Last updated” date above reflects the most
     recent version. Continued use of Glad after changes means you accept the updated policy.
   </p>
 
-  <h2>11. Contact</h2>
+  <h2>12. Contact</h2>
   <p>
-    Questions about this policy? Contact us at
+    Questions about this policy, or want to exercise a privacy right? Contact us at
     <a href="mailto:simmons.caden23@gmail.com">simmons.caden23@gmail.com</a>.
   </p>
 </body>
